@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+
+<p id="count">0</p>
+<button id="btn">Add</button>
+<h1 id="title">You clicked 0 times</h1>
+<span id="badge">0</span>
+
+<script>
+  let count = 0;
+  const p = document.getElementById("count");
+  const btn = document.getElementById("btn");
+
+  btn.addEventListener("click", () => {
+    count = count + 1;
+    p.textContent = count;          
+    document.getElementById("title").textContent = `You clicked ${count} times`;
+    document.getElementById("badge").textContent = count;
+  });
+</script>
+</body>
+</html>
